@@ -26,6 +26,7 @@ body {
   padding: 0;
   font-family: var(--font-lora);
   color: var(--hazel);
+  background-color: #fafafa;
 }
 
 h1,
@@ -39,6 +40,10 @@ h4 {
 h1 {
   font-size: 1.5rem;
   padding-top: 1em;
+}
+
+.larger-h1 {
+  font-size: 2.2rem;
 }
 
 /* HEADER */
@@ -57,6 +62,7 @@ header {
   justify-content: space-between;
   margin: 0 1em;
   padding: 0.75em 0;
+  background-color: #ffffff;
 }
 
 #site-header-title {
@@ -103,7 +109,7 @@ p {
   background-image: url("/images/computer-on-desktop.png");
   width: 100%;
   height: 40vh;
-  background-position: center bottom;
+  background-position: center 80%;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -151,6 +157,17 @@ p {
   margin-top: 0.56em;
 }
 
+/* ABOUT ME */
+.avatar-img {
+  height: 182px;
+  width: 182px;
+}
+
+.about-intro {
+  display: flex;
+  flex-direction: column;
+}
+
 /* POST.HTML & FEATURED-POST */
 .blog-post-container {
   max-width: 1200px;
@@ -191,12 +208,14 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  transform: scaleX(-1);
 }
 
 #hero-container h1,
 #hero-container p {
   position: relative;
   z-index: 1;
+  max-width: 900px;
 }
 
 /* FOOTER */
@@ -212,4 +231,50 @@ footer {
 
 footer p {
   margin: 0.2em;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .about-intro {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  #site-info-container,
+  nav {
+    padding: 1.875em 3.125em 1.875em 5.625em;
+  }
+
+  .smaller-main {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .recent-posts-title {
+    text-align: center;
+  }
+
+  .blog-post-text {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  #hero-container {
+    height: 90vh;
+    background-position: center 70%;
+  }
+
+  #hero-container h1 {
+    font-size: 2.5rem;
+    padding: 0 3.3rem;
+  }
+
+  #hero-container p {
+    padding: 0 1rem 3.75rem 3.3rem;
+  }
 }

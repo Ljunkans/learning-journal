@@ -21,11 +21,13 @@ function renderPost(post) {
     .join("");
 
   document.getElementById("post-container").innerHTML = `
+  <div class="blog-post-text">
     <p class="date">${post.published}</p>
     <h1>${post.title}</h1>
-    <p>${post.extract}</p>
+    <p>${post.extract}</p></div>
     <img class="blog-image" src="${post.image}" alt="${post.alt}" />
-    <p>${bodyHtml}</p>
+     <div class="blog-post-text">
+    <p>${bodyHtml}</p></div>
     <h2 class="recent-posts-title margin-heading">Recent posts</h2>
   `;
 }
